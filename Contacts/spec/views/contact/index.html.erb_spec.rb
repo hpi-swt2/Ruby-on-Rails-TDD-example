@@ -23,5 +23,10 @@ RSpec.describe "contact/index.html.erb", type: :view do
     it "does not render the 'empty' message" do
       expect(rendered).not_to match /no contacts/i
     end
+    
+    it "displays all first names of contacts" do
+      expect(rendered).to include @adam.first_name
+      expect(rendered).to include @eve.first_name
+    end
   end
 end
