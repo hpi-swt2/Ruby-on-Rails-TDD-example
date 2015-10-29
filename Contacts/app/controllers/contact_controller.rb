@@ -1,5 +1,5 @@
 class ContactController < ApplicationController
   def index
-  	@count = Contact.count
+  	@contact_list = Contact.all
   end
 end
