@@ -13,7 +13,7 @@ feature "the contact list" do
     visit '/contact/index'
   end
 
-  scenario "show the names and age of contacts", :wip => true do
+  scenario "show the names and age of contacts" do
     # Only check that the text is present, the correctness of
     # age calculation is explicitly tested in the model test
     @contacts.each do |c|
@@ -22,7 +22,7 @@ feature "the contact list" do
     end
   end
 
-  it "it shows the correct amount of list items", :wip => true do
+  it "it shows the correct amount of list items" do
     expect(page).to have_css("li", :count => @contacts.size)
   end
 end
