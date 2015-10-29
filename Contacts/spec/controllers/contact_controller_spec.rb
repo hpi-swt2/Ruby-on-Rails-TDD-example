@@ -14,5 +14,11 @@ RSpec.describe ContactController, type: :controller do
       get :index
       expect(response).to render_template("contact/index")
     end
+    
+    it "assigns @contact_list in the controller context" do
+      contact = Contact.create
+      get :index
+      expect(assigns(:contact_list)).to eq([contact])
+    end
   end
 end
